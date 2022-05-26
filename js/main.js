@@ -72,3 +72,21 @@ function isEven(){
         message = "No se brou, seguro pusiste un decimal o una palabra";
     alert(message)
 }
+function binarySearch(numerosDondeBuscar,numABuscar){
+  let l=0;
+  let r= numerosDondeBuscar.length -1;//6
+  let mid;
+  while(r >= 1){
+    mid = l + Math.floor((r-l)/2);//3
+    if(numerosDondeBuscar[mid]==numABuscar)//numerosDonde=6
+      return mid;
+  
+    if(numerosDondeBuscar[mid] > numABuscar)
+      r = mid - 1;
+    else
+      l = mid + 1;//4
+  console.log(l,r,mid)
+}
+  return -1;
+  
+}
