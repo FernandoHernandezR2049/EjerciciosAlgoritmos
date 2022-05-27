@@ -90,3 +90,27 @@ function binarySearch(numerosDondeBuscar,numABuscar){
   return -1;
   
 }
+function guessNumber(){
+    alert("Piensa un número entre el número 1 y el 100");
+    let l = 1;
+    let r = 100;
+    let mid;
+    while(r >= 1 && l <101){
+        mid = l + Math.floor((r-l)/2);//3
+        if(confirm(`Tu número es ${mid}?`))//numerosDonde=6
+            return mid;
+    
+        if(confirm(`Tu número es menor a ${mid}?`))
+            r = mid - 1;
+        else
+            l = mid + 1;//4
+        console.log(l,r,mid)
+    }
+  return -1;
+
+}
+function yourNumberiS(){
+    const guessedNumber = guessNumber();
+    guessedNumber === -1 ? alert("Hiciste trampa brou, tu número no está en el rango especificado"):alert("Tu número es " + guessedNumber);
+}
+yourNumberiS();
